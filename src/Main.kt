@@ -1,24 +1,23 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val firstWeight = 2.5 // тип Double
-    val secondWeight = 2.5f // тип Float
+    // Операция 1. Объединение строк(конкатенация)
+    val typeName = "B2"
+    val serialName = "D" + 2
+    val droidName = typeName + "-" + serialName
+    println(droidName)
 
-    println(firstWeight)
-    println(secondWeight)
+    // Операция 2. Модификация строк
+    val pair = "ПЛАНЕТА: Земля" + "\n" + "СПУТНИК: Луна"
+    val spaceshipName = "КРЕЙСЕР \"Галактика\""
+    println(pair)
+    println(spaceshipName)
 
-    val myBitcoin = 0.0000001
-    val myNewBitcoin = 0.0000001f
-
-    println(myBitcoin)
-    println(myNewBitcoin)
-
-    val firstPlaceLongitude = 35.375669114
-    val secondPlaceLongitude = 35.37569114f
-
-    println(firstPlaceLongitude)
-    println(secondPlaceLongitude)
-
-    val result = 14.5 + 0.214 + 0.341 + 1500.4
-    println(result)
+    // Операция 3. Хранение длинных строк
+    val text = """
+        Генерал, в этом сражении Вы одержали победу над 128 дроидами.
+        Это на 17 меньше, чем в битве при Ириандии.
+        Что будете делать?
+    """.trimIndent()
+    println(text)
 }
