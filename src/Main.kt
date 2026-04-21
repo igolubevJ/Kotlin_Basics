@@ -1,23 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    // Цикл while
-    var droidCount = 100
-    val jediPower = 3
+    // Последовательность чисел
+    val droidCount = 100
+    val droidCost = 1_000_000
+    var orderCost = 0
 
-    while (droidCount > 0) {
-        droidCount -= jediPower
+    for (droidNumber in 1..droidCount) {
+        orderCost += droidCost
     }
 
-    println("Дройды закончились")
+    println("Общая стоимость партии дроидов: $orderCost")
 
-    // Цикл do..while
-    val salary = 1000
-    var jediMoney = 0
+    // until
 
-    do {
-        jediMoney += salary
-    } while (jediMoney == 0)
+    val firstSaleDay = 1
+    val lastSaleDay = 14
+    val saleDays = firstSaleDay until lastSaleDay
 
-    print("У вас появились деньги")
+    for (day in saleDays) {
+        println("Сегодня $day день продаж")
+    }
+
+    // downTo
+
+    val cookingTime = 10
+    val range = cookingTime downTo 1
+
+    for (currentTime in range) {
+        println("До приготовления осталось секунд: $currentTime")
+    }
+
+    println("Заказ готов")
+
+    // step
+
+    val range1 = 10..20
+    val range2 = 10..20 step 2
+    val range3 = 10 downTo 1
+    val range4 = 10 downTo 1 step 2
+
 }
