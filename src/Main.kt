@@ -1,18 +1,23 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    //  Для фабрики роботов требуется разработать программу, которая будет корректно склонять слово "дроид"
-    //  на итоговой презентации.
+    // Цикл while
+    var droidCount = 100
+    val jediPower = 3
 
-    val droids = readln().toInt()
-
-    print("За этот год мы разработали ")
-
-    when (droids % 10) {
-        0 -> print("$droids дроидов")
-        1 -> print("$droids дроид")
-        in 2..4 -> print("$droids дройда")
-        in 5..9 -> print("$droids дройдов")
-        else -> print("$droids дройдов")
+    while (droidCount > 0) {
+        droidCount -= jediPower
     }
+
+    println("Дройды закончились")
+
+    // Цикл do..while
+    val salary = 1000
+    var jediMoney = 0
+
+    do {
+        jediMoney += salary
+    } while (jediMoney == 0)
+
+    print("У вас появились деньги")
 }
