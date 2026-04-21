@@ -1,41 +1,38 @@
-fun main() {
-    // Последовательность чисел
-    val droidCount = 100
-    val droidCost = 1_000_000
-    var orderCost = 0
+fun main(){
+    val planets = arrayOf("Меркурий", "Венера", "Земля", "Марс")
+    val priceOfOrders = arrayOf(1250, 350, 7_490, 19_900)
+    val statusOfOrder = arrayOf(true, false, true, true)
 
-    for (droidNumber in 1..droidCount) {
-        orderCost += droidCost
+    // Обращение к элементу
+    val planetName = planets[0]
+    println(planetName)
+
+    // print все элементы массива
+    for (planetName in planets) {
+        println(planetName)
     }
 
-    println("Общая стоимость партии дроидов: $orderCost")
-
-    // until
-
-    val firstSaleDay = 1
-    val lastSaleDay = 14
-    val saleDays = firstSaleDay until lastSaleDay
-
-    for (day in saleDays) {
-        println("Сегодня $day день продаж")
+    // index
+    for (index in planets.indices) {
+        if (index + 1 < planets.size) {
+            println(planets[index] + " и " + planets[index + 1])
+        }
     }
 
-    // downTo
+    // требуется выводить только определенные элементы
+    val orders = arrayOf("Заказ 1", "Заказ 2", "Заказ 3", "Заказ 4")
 
-    val cookingTime = 10
-    val range = cookingTime downTo 1
-
-    for (currentTime in range) {
-        println("До приготовления осталось секунд: $currentTime")
+    println("Список приоритетных заказов:")
+    for (index in orders.indices) {
+        if ((index + 1) % 2 == 0) {
+            println(" - ${orders[index]}")
+        }
     }
 
-    println("Заказ готов")
-
-    // step
-
-    val range1 = 10..20
-    val range2 = 10..20 step 2
-    val range3 = 10 downTo 1
-    val range4 = 10 downTo 1 step 2
-
+    println("Список неприоритетных заказов:")
+    for (index in orders.indices) {
+        if ((index + 1) % 2 != 0) {
+            println(" - ${orders[index]}")
+        }
+    }
 }
